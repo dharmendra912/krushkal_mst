@@ -45,8 +45,8 @@ The program outputs the edges of the Minimum Spanning Tree along with their weig
 ```
 
 <div style="display: flex;">
-    <img src="resources/readme_images/sample_input.png" alt="Image 1" style="width: 50%;">
-    <img src="resources/readme_images/sample_output.png" alt="Image 2" style="width: 50%;">
+    <img src="resources/readme_images/sample_input.png" alt="Sample Input" style="width: 50%;">
+    <img src="resources/readme_images/sample_output.png" alt="Sample Output" style="width: 50%;">
 </div>
 
 In this example, the MST contains 6 edges.
