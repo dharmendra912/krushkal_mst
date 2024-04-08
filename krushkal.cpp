@@ -91,6 +91,7 @@ void kruskalMST(int **graph, int vertices) {
     // Initialize variables for MST
     Edge *result = new Edge[vertices - 1]; // MST has (vertices - 1) edges
     int resultIndex = 0, edgeIndex = 0;
+    int minCost = 0;
 
     // Apply Kruskal's algorithm
     while (resultIndex < vertices - 1 && edgeIndex < edgeCount) {
@@ -107,6 +108,8 @@ void kruskalMST(int **graph, int vertices) {
             result[resultIndex++] = nextEdge;
             // Union the sets containing the source and destination vertices
             performUnion(parent, x, y);
+            // Update minimum cost
+            minCost += nextEdge.weight;
         }
     }
 
@@ -115,6 +118,9 @@ void kruskalMST(int **graph, int vertices) {
     for (int i = 0; i < vertices - 1; ++i) {
         cout << result[i].src + 1 << "--" << result[i].dest + 1 << " Weight: " << result[i].weight << endl;
     }
+
+    // Print the minimum cost
+    cout << "Minimum Cost: " << minCost << endl;
 
     // Deallocate memory
     delete[] edges;
